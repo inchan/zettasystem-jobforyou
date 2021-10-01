@@ -15,6 +15,9 @@
 		38C10A0C26CF335100B5292F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C10A0A26CF335100B5292F /* Main.storyboard */; };
 		38C10A0E26CF335200B5292F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C10A0D26CF335200B5292F /* Assets.xcassets */; };
 		38C10A1126CF335200B5292F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C10A0F26CF335200B5292F /* LaunchScreen.storyboard */; };
+		38F8D22827015D460013A1B3 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F8D22727015D460013A1B3 /* WebView.swift */; };
+		38F8D22D270169A00013A1B3 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F8D22C270169A00013A1B3 /* URLs.swift */; };
+		38F8D23027017ECC0013A1B3 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F8D22F27017ECC0013A1B3 /* Log.swift */; };
 		EDEDF06B71656598167D2E50 /* Pods_JobForYou.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0DAE2AE25EC003EDD6FA28 /* Pods_JobForYou.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +33,9 @@
 		38C10A0D26CF335200B5292F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38C10A1026CF335200B5292F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38C10A1226CF335200B5292F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38F8D22727015D460013A1B3 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		38F8D22C270169A00013A1B3 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		38F8D22F27017ECC0013A1B3 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		AF0DAE2AE25EC003EDD6FA28 /* Pods_JobForYou.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobForYou.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF23617D0D559679FF3B3228 /* Pods-JobForYou.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobForYou.debug.xcconfig"; path = "Target Support Files/Pods-JobForYou/Pods-JobForYou.debug.xcconfig"; sourceTree = "<group>"; };
 		DBC0B0CDB5721CCE808451D3 /* Pods-JobForYou.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobForYou.release.xcconfig"; path = "Target Support Files/Pods-JobForYou/Pods-JobForYou.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,10 +75,13 @@
 		38C10A0326CF335100B5292F /* JobForYou */ = {
 			isa = PBXGroup;
 			children = (
+				38F8D22E27017EBF0013A1B3 /* Util */,
 				38F8D22427015AA20013A1B3 /* AppDelegate */,
 				38F8D22527015AAA0013A1B3 /* Supporting files */,
 				38F8D22627015AC10013A1B3 /* Resource */,
+				38F8D22C270169A00013A1B3 /* URLs.swift */,
 				38C10A0826CF335100B5292F /* ViewController.swift */,
+				38F8D22727015D460013A1B3 /* WebView.swift */,
 			);
 			path = JobForYou;
 			sourceTree = "<group>";
@@ -104,6 +113,14 @@
 				38C10A0F26CF335200B5292F /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		38F8D22E27017EBF0013A1B3 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				38F8D22F27017ECC0013A1B3 /* Log.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		B1BA6AC0EB6FB01B01A305B4 /* Frameworks */ = {
@@ -239,7 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F8D22D270169A00013A1B3 /* URLs.swift in Sources */,
 				38C10A0926CF335100B5292F /* ViewController.swift in Sources */,
+				38F8D23027017ECC0013A1B3 /* Log.swift in Sources */,
+				38F8D22827015D460013A1B3 /* WebView.swift in Sources */,
 				38C10A0526CF335100B5292F /* AppDelegate.swift in Sources */,
 				38C10A0726CF335100B5292F /* SceneDelegate.swift in Sources */,
 			);
@@ -389,9 +409,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = JobForYou/JobForYou.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "JobForYou/Supporting files/JobForYou.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = KBN57BFX9W;
 				INFOPLIST_FILE = "JobForYou/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -412,9 +432,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = JobForYou/JobForYou.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "JobForYou/Supporting files/JobForYou.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = KBN57BFX9W;
 				INFOPLIST_FILE = "JobForYou/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

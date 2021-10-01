@@ -68,26 +68,6 @@ extension AppDelegate: MessagingDelegate {
     }
 }
 
-
-func prettyLog(title: String, value: String) {
-    let gubun = "#"
-    let shortGubun = "###"
-    
-    let message = "\(shortGubun) \(title) \(shortGubun)"
-    var longGubun = ""
-    for _ in 0..<message.count {
-        longGubun.append(gubun)
-    }
-    var messages = [String]()
-    messages.append(longGubun)
-    messages.append(message)
-    messages.append(" : \(value)")
-    messages.append(longGubun)
-    
-    print("\n\n\(messages.joined(separator: "\n"))\n")
-}
-
-
 class PushManager {
    
    // MARK: -
